@@ -614,7 +614,7 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 
 <script>
 // ── LANDING ───────────────────────────────────────────────────────────────────
-function launchApp(){
+window.launchApp = function launchApp(){
   document.getElementById('landing').style.display='none';
   var app=document.getElementById('app-wrapper');
   app.classList.add('visible');
@@ -628,7 +628,7 @@ function launchApp(){
     if(spacer) topBar.insertBefore(btn,spacer);
   }
 }
-function backToLanding(){
+window.backToLanding = function backToLanding(){
   document.getElementById('landing').style.display='flex';
   document.getElementById('app-wrapper').classList.remove('visible');
 }
