@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -271,6 +270,30 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 .back-to-landing:hover{border-color:var(--teal-border);color:var(--teal);background:var(--teal-dim)}
 @media(max-width:720px){.land-nav{padding:20px 24px}.land-hero{padding:60px 24px 40px}.land-features{grid-template-columns:1fr}.land-bridge{padding:32px 24px}.land-bridge-inner{grid-template-columns:1fr;gap:32px}.land-footer{padding:14px 24px;flex-direction:column;gap:6px;text-align:center}}
 </style>
+<script>
+// Landing controls — defined early, fully global, isolated from app script
+function launchApp(){
+  document.getElementById('landing').style.display='none';
+  var app=document.getElementById('app-wrapper');
+  app.classList.add('visible');
+  var topBar=app.querySelector('.top-bar');
+  if(topBar&&!topBar.querySelector('.back-to-landing')){
+    var btn=document.createElement('button');
+    btn.className='back-to-landing';
+    btn.innerHTML='&#8592; Back';
+    btn.onclick=backToLanding;
+    var spacer=topBar.querySelector('.spacer');
+    if(spacer) topBar.insertBefore(btn,spacer);
+  }
+}
+function backToLanding(){
+  document.getElementById('landing').style.display='flex';
+  document.getElementById('app-wrapper').classList.remove('visible');
+}
+window.addEventListener('load',function(){
+  if(window.location.search.includes('app')||window.location.hash==='#app'){launchApp();}
+});
+</script>
 </head>
 <body>
 
@@ -614,27 +637,6 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 </div>
 
 <script>
-// ── LANDING ───────────────────────────────────────────────────────────────────
-window.launchApp = function launchApp(){
-  document.getElementById('landing').style.display='none';
-  var app=document.getElementById('app-wrapper');
-  app.classList.add('visible');
-  var topBar=app.querySelector('.top-bar');
-  if(topBar&&!topBar.querySelector('.back-to-landing')){
-    var btn=document.createElement('button');
-    btn.className='back-to-landing';
-    btn.innerHTML='&#8592; Back';
-    btn.onclick=backToLanding;
-    var spacer=topBar.querySelector('.spacer');
-    if(spacer) topBar.insertBefore(btn,spacer);
-  }
-}
-window.backToLanding = function backToLanding(){
-  document.getElementById('landing').style.display='flex';
-  document.getElementById('app-wrapper').classList.remove('visible');
-}
-if(window.location.search.includes('app')||window.location.hash==='#app'){launchApp();}
-
 // ── APP ───────────────────────────────────────────────────────────────────────
 
 (function(){
