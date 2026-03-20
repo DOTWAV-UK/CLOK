@@ -39,7 +39,7 @@ The bridge is needed for two workflows:
 
 ### Requirements
 
-- Node.js 16 or later
+- Node.js 20 LTS (do not use Node 21+ — native MIDI bindings are not yet compatible)
 - Mac: IAC Driver enabled (Audio MIDI Setup → MIDI Studio)
 - Windows: [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) installed with a virtual port
 

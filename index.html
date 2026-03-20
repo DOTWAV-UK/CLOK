@@ -36,7 +36,7 @@ html,body{margin:0;padding:0;background:#0d1f1e}
   --teal:#4ec9b8;--teal-dim:rgba(78,201,184,0.10);--teal-border:rgba(78,201,184,0.25);
   --bg-deep:#0d1f1e;--surface-raised:#111e1d;--border-t:rgba(78,201,184,0.10);--text-hi:#e8f4f2;
 }
-#app-wrapper{background:var(--bg-deep);color:var(--text);font-family:var(--sans);height:100vh;overflow:hidden;display:flex;flex-direction:column}
+#app-wrapper{background:var(--bg-deep);color:var(--text);font-family:var(--sans);height:100vh;overflow:hidden;flex-direction:column}
 
 /* ── TOP BAR ── */
 .top-bar{display:flex;align-items:center;gap:14px;padding:0 20px;height:52px;background:var(--bg-deep);border-bottom:1px solid var(--border-t);position:sticky;top:0;z-index:100;flex-shrink:0}
@@ -244,8 +244,8 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 
 
 /* ── APP WRAPPER SHOW/HIDE ── */
-#app-wrapper{display:none;height:100vh;overflow:hidden;flex-direction:column}
-#app-wrapper.visible{display:flex}
+#app-wrapper{display:none!important;height:100vh;overflow:hidden;flex-direction:column}
+#app-wrapper.visible{display:flex!important}
 
 /* ── LANDING STYLES ── */
 :root{
@@ -350,7 +350,7 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
           </div>
         </div>
         <div class="land-bridge-req">
-          Requires <span>Node.js 16+</span> &middot;
+          Requires <span>Node.js 20 LTS</span> &middot;
           Mac: <span>IAC Driver</span> (Audio MIDI Setup) &middot;
           Windows: <span>loopMIDI</span>
         </div>
@@ -364,9 +364,9 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
           <span>&#8595;&nbsp; Download package.json</span>
           <span class="btn-download-meta">Dependencies manifest</span>
         </a>
-        <a href="https://nodejs.org" class="btn-download btn-download-secondary" target="_blank" rel="noopener">
-          <span>&#8599;&nbsp; Get Node.js</span>
-          <span class="btn-download-meta">nodejs.org</span>
+        <a href="https://nodejs.org/en/download" class="btn-download btn-download-secondary" target="_blank" rel="noopener">
+          <span>&#8599;&nbsp; Get Node.js 20 LTS</span>
+          <span class="btn-download-meta">nodejs.org/en/download</span>
         </a>
         <a href="https://www.tobias-erichsen.de/software/loopmidi.html" class="btn-download btn-download-secondary" target="_blank" rel="noopener">
           <span>&#8599;&nbsp; Get loopMIDI</span>
