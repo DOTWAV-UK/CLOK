@@ -1,0 +1,26 @@
+{
+  "name": "clok-bridge",
+  "version": "1.1.0",
+  "description": "CLOK Bridge — connects your DAW to DOTWAV CLOK over WebSocket for MTC sync",
+  "main": "bridge.js",
+  "scripts": {
+    "start": "node bridge.js",
+    "receive": "node bridge.js --mode receive",
+    "list": "node bridge.js --list"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "midi": "^2.0.0",
+    "ws": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "Alexander Wilson-Thame <hello@dotwav.uk> (https://dotwav.uk)",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://clok.dotwav.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotwav/clok"
+  }
+}
