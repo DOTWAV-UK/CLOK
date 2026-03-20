@@ -6,24 +6,20 @@
 <title>DOTWAV CLOK — Professional LTC Engine</title>
 <meta name="description" content="Free professional LTC timecode tool for film and audio post-production. Generate and decode SMPTE LTC in any browser. No install required.">
 <meta name="author" content="DOTWAV / Alexander Wilson-Thame">
-<meta property="og:type"        content="website">
-<meta property="og:title"       content="DOTWAV CLOK — Professional LTC Engine">
-<meta property="og:description" content="Generate and decode SMPTE LTC timecode in your browser. Free professional tool for film and audio post-production.">
-<meta property="og:url"         content="https://clok.dotwav.uk">
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="DOTWAV CLOK — Professional LTC Engine">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DOTWAV CLOK — Professional LTC Engine">
+<meta property="og:description" content="Generate and decode SMPTE LTC timecode in your browser. Free professional tool.">
+<meta property="og:url" content="https://clok.dotwav.uk">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DOTWAV CLOK — Professional LTC Engine">
 <meta name="twitter:description" content="Generate and decode SMPTE LTC timecode in your browser.">
 <link rel="canonical" href="https://clok.dotwav.uk">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-/* ── SHARED BASE ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{margin:0;padding:0;background:#0d1f1e}
-
-/* ── APP STYLES (verbatim from CLOK, html/body replaced with #app-wrapper) ── */
 
 /* ── SUITEVIEW DESIGN SYSTEM ───────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -36,7 +32,7 @@ html,body{margin:0;padding:0;background:#0d1f1e}
   --teal:#4ec9b8;--teal-dim:rgba(78,201,184,0.10);--teal-border:rgba(78,201,184,0.25);
   --bg-deep:#0d1f1e;--surface-raised:#111e1d;--border-t:rgba(78,201,184,0.10);--text-hi:#e8f4f2;
 }
-#app-wrapper{background:var(--bg-deep);color:var(--text);font-family:var(--sans);height:100vh;overflow:hidden;flex-direction:column}
+
 
 /* ── TOP BAR ── */
 .top-bar{display:flex;align-items:center;gap:14px;padding:0 20px;height:52px;background:var(--bg-deep);border-bottom:1px solid var(--border-t);position:sticky;top:0;z-index:100;flex-shrink:0}
@@ -212,28 +208,6 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 .footer span{color:rgba(232,244,242,0.25);margin-left:4px}
 .footer-dot{width:4px;height:4px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:4px}
 
-.land-bridge{background:var(--surface-raised);border-top:1px solid var(--border-t);border-bottom:1px solid var(--border-t);padding:40px 48px;position:relative;z-index:2}
-.land-bridge-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.land-bridge-label{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);opacity:.6;margin-bottom:10px}
-.land-bridge-title{font-family:var(--cond);font-weight:900;font-size:1.6rem;text-transform:uppercase;letter-spacing:-0.02em;color:var(--text-hi);margin-bottom:10px}
-.land-bridge-desc{font-family:var(--sans);font-size:0.85rem;color:rgba(232,244,242,0.45);line-height:1.65;margin-bottom:20px}
-.land-bridge-steps{display:flex;flex-direction:column;gap:10px}
-.land-bridge-step{display:flex;align-items:flex-start;gap:12px}
-.land-bridge-num{font-family:var(--mono);font-size:0.6rem;color:var(--teal);background:var(--teal-dim);border:1px solid var(--teal-border);border-radius:2px;padding:2px 7px;flex-shrink:0;margin-top:1px}
-.land-bridge-step-text{font-family:var(--mono);font-size:0.62rem;color:rgba(232,244,242,0.5);line-height:1.6}
-.land-bridge-step-text span{color:var(--teal)}
-.land-bridge-downloads{display:flex;flex-direction:column;gap:8px}
-.btn-download{font-family:var(--mono);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 20px;border-radius:2px;border:1px solid var(--teal-border);cursor:pointer;background:var(--teal-dim);color:var(--teal);text-decoration:none;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.btn-download:hover{background:rgba(78,201,184,0.2);box-shadow:0 0 16px rgba(78,201,184,0.15)}
-.btn-download-meta{font-size:0.54rem;opacity:.6;font-weight:400}
-.btn-download-secondary{border-color:var(--border-t);background:transparent;color:var(--muted)}
-.btn-download-secondary:hover{border-color:var(--border-t);background:rgba(255,255,255,0.03);color:var(--text-hi);box-shadow:none}
-.land-bridge-req{margin-top:16px;padding:12px 14px;background:rgba(13,31,30,0.6);border:1px solid var(--border-t);border-radius:2px;font-family:var(--mono);font-size:0.58rem;color:var(--muted);line-height:1.7}
-.land-bridge-req span{color:var(--teal)}
-@media(max-width:720px){
-  .land-bridge{padding:32px 24px}
-  .land-bridge-inner{grid-template-columns:1fr;gap:32px}
-}
 @media(max-width:720px){
   .panels{grid-template-columns:1fr}
   .panel:first-child{border-right:none;border-bottom:1px solid var(--border-t)}
@@ -242,18 +216,9 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
   .tc-panel.right{border-left:none;border-top:1px solid var(--border-t)}
 }
 
-
-/* ── APP WRAPPER SHOW/HIDE ── */
-#app-wrapper{display:none!important;height:100vh;overflow:hidden;flex-direction:column}
+#app-wrapper{display:none!important;height:100vh;overflow:hidden;flex-direction:column;background:var(--bg-deep);color:var(--text);font-family:var(--sans)}
 #app-wrapper.visible{display:flex!important}
-
-/* ── LANDING STYLES ── */
-:root{
-  --teal:#4ec9b8;--teal-dim:rgba(78,201,184,0.10);--teal-border:rgba(78,201,184,0.25);
-  --amber:#e8a830;--amber-dim:rgba(232,168,48,0.12);--amber-border:rgba(232,168,48,0.28);
-  --bg-deep:#0d1f1e;--border-t:rgba(78,201,184,0.10);--text-hi:#e8f4f2;--muted:#555555;
-  --mono:"DM Mono",monospace;--sans:"Barlow",sans-serif;--cond:"Barlow Condensed",sans-serif;
-}
+:root{--teal:#4ec9b8;--teal-dim:rgba(78,201,184,0.10);--teal-border:rgba(78,201,184,0.25);--amber:#e8a830;--amber-dim:rgba(232,168,48,0.12);--amber-border:rgba(232,168,48,0.28);--bg-deep:#0d1f1e;--surface-raised:#111e1d;--border-t:rgba(78,201,184,0.10);--text-hi:#e8f4f2;--muted:#555555;--mono:"DM Mono",monospace;--sans:"Barlow",sans-serif;--cond:"Barlow Condensed",sans-serif}
 #landing{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:var(--bg-deep)}
 #landing::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(78,201,184,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(78,201,184,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
 #landing::after{content:'';position:absolute;top:-20%;left:-10%;width:60%;height:80%;border-radius:50%;background:radial-gradient(ellipse,rgba(20,100,85,0.22) 0%,transparent 65%);pointer-events:none}
@@ -281,16 +246,29 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 .land-feat-label{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);opacity:.6}
 .land-feat-value{font-family:var(--cond);font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--text-hi);letter-spacing:0.02em}
 .land-feat-desc{font-family:var(--sans);font-size:0.78rem;color:rgba(232,244,242,0.4);line-height:1.5;margin-top:2px}
+.land-bridge{background:var(--surface-raised);border-top:1px solid var(--border-t);border-bottom:1px solid var(--border-t);padding:40px 48px;position:relative;z-index:2}
+.land-bridge-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.land-bridge-label{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);opacity:.6;margin-bottom:10px}
+.land-bridge-title{font-family:var(--cond);font-weight:900;font-size:1.6rem;text-transform:uppercase;letter-spacing:-0.02em;color:var(--text-hi);margin-bottom:10px}
+.land-bridge-desc{font-family:var(--sans);font-size:0.85rem;color:rgba(232,244,242,0.45);line-height:1.65;margin-bottom:20px}
+.land-bridge-steps{display:flex;flex-direction:column;gap:10px}
+.land-bridge-step{display:flex;align-items:flex-start;gap:12px}
+.land-bridge-num{font-family:var(--mono);font-size:0.6rem;color:var(--teal);background:var(--teal-dim);border:1px solid var(--teal-border);border-radius:2px;padding:2px 7px;flex-shrink:0;margin-top:1px}
+.land-bridge-step-text{font-family:var(--mono);font-size:0.62rem;color:rgba(232,244,242,0.5);line-height:1.6}
+.land-bridge-step-text span{color:var(--teal)}
+.land-bridge-downloads{display:flex;flex-direction:column;gap:8px}
+.btn-download{font-family:var(--mono);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 20px;border-radius:2px;border:1px solid var(--teal-border);cursor:pointer;background:var(--teal-dim);color:var(--teal);text-decoration:none;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.btn-download:hover{background:rgba(78,201,184,0.2);box-shadow:0 0 16px rgba(78,201,184,0.15)}
+.btn-download-meta{font-size:0.54rem;opacity:.6;font-weight:400}
+.btn-download-secondary{border-color:var(--border-t);background:transparent;color:var(--muted)}
+.btn-download-secondary:hover{border-color:var(--border-t);background:rgba(255,255,255,0.03);color:var(--text-hi);box-shadow:none}
+.land-bridge-req{margin-top:16px;padding:12px 14px;background:rgba(13,31,30,0.6);border:1px solid var(--border-t);border-radius:2px;font-family:var(--mono);font-size:0.58rem;color:var(--muted);line-height:1.7}
+.land-bridge-req span{color:var(--teal)}
 .land-footer{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-top:1px solid var(--border-t);background:var(--bg-deep);font-family:var(--mono);font-size:0.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);position:relative;z-index:2}
 .land-footer a{color:var(--muted);text-decoration:none}.land-footer a:hover{color:var(--teal)}
 .back-to-landing{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--border-t);border-radius:2px;padding:4px 10px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
 .back-to-landing:hover{border-color:var(--teal-border);color:var(--teal);background:var(--teal-dim)}
-@media(max-width:720px){
-  .land-nav{padding:20px 24px}
-  .land-hero{padding:60px 24px 40px}
-  .land-features{grid-template-columns:1fr}
-  .land-footer{padding:14px 24px;flex-direction:column;gap:6px;text-align:center}
-}
+@media(max-width:720px){.land-nav{padding:20px 24px}.land-hero{padding:60px 24px 40px}.land-features{grid-template-columns:1fr}.land-bridge{padding:32px 24px}.land-bridge-inner{grid-template-columns:1fr;gap:32px}.land-footer{padding:14px 24px;flex-direction:column;gap:6px;text-align:center}}
 </style>
 </head>
 <body>
@@ -328,54 +306,25 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
   <div class="land-bridge" id="bridge">
     <div class="land-bridge-inner">
       <div>
-        <div class="land-bridge-label">Optional · For DAW sync</div>
+        <div class="land-bridge-label">Optional &middot; For DAW sync</div>
         <div class="land-bridge-title">CLOK Bridge</div>
         <p class="land-bridge-desc">A small Node.js server that runs on your machine and connects your DAW to CLOK over WebSocket. Needed for MTC sync with Pro Tools and other DAWs.</p>
         <div class="land-bridge-steps">
-          <div class="land-bridge-step">
-            <span class="land-bridge-num">01</span>
-            <div class="land-bridge-step-text">Download <span>bridge.js</span> and <span>package.json</span> into a folder on your machine</div>
-          </div>
-          <div class="land-bridge-step">
-            <span class="land-bridge-num">02</span>
-            <div class="land-bridge-step-text">Run <span>npm install</span> once to install dependencies</div>
-          </div>
-          <div class="land-bridge-step">
-            <span class="land-bridge-num">03</span>
-            <div class="land-bridge-step-text">Run <span>node bridge.js</span> — then open CLOK and set Decoder → CLOK Bridge</div>
-          </div>
-          <div class="land-bridge-step">
-            <span class="land-bridge-num">04</span>
-            <div class="land-bridge-step-text">In Pro Tools: <span>Setup → Peripherals → Synchronisation → MTC Out → IAC Driver Bus 1</span></div>
-          </div>
+          <div class="land-bridge-step"><span class="land-bridge-num">01</span><div class="land-bridge-step-text">Download <span>bridge.js</span> and <span>package.json</span> into a folder on your machine</div></div>
+          <div class="land-bridge-step"><span class="land-bridge-num">02</span><div class="land-bridge-step-text">Run <span>npm install</span> once to install dependencies</div></div>
+          <div class="land-bridge-step"><span class="land-bridge-num">03</span><div class="land-bridge-step-text">Run <span>node bridge.js</span> &mdash; then open CLOK and set Decoder &rarr; CLOK Bridge</div></div>
+          <div class="land-bridge-step"><span class="land-bridge-num">04</span><div class="land-bridge-step-text">In Pro Tools: <span>Setup &rarr; Peripherals &rarr; Synchronisation &rarr; MTC Out &rarr; IAC Driver Bus 1</span></div></div>
         </div>
-        <div class="land-bridge-req">
-          Requires <span>Node.js 20 LTS</span> &middot;
-          Mac: <span>IAC Driver</span> (Audio MIDI Setup) &middot;
-          Windows: <span>loopMIDI</span>
-        </div>
+        <div class="land-bridge-req">Requires <span>Node.js 20 LTS</span> &middot; Mac: <span>IAC Driver</span> (Audio MIDI Setup) &middot; Windows: <span>loopMIDI</span></div>
       </div>
       <div class="land-bridge-downloads">
-        <a href="https://raw.githubusercontent.com/dotwav/clok/main/bridge.js" class="btn-download" download="bridge.js">
-          <span>&#8595;&nbsp; Download bridge.js</span>
-          <span class="btn-download-meta">Node.js · ~10KB</span>
-        </a>
-        <a href="https://raw.githubusercontent.com/dotwav/clok/main/package.json" class="btn-download" download="package.json">
-          <span>&#8595;&nbsp; Download package.json</span>
-          <span class="btn-download-meta">Dependencies manifest</span>
-        </a>
-        <a href="https://nodejs.org/en/download" class="btn-download btn-download-secondary" target="_blank" rel="noopener">
-          <span>&#8599;&nbsp; Get Node.js 20 LTS</span>
-          <span class="btn-download-meta">nodejs.org/en/download</span>
-        </a>
-        <a href="https://www.tobias-erichsen.de/software/loopmidi.html" class="btn-download btn-download-secondary" target="_blank" rel="noopener">
-          <span>&#8599;&nbsp; Get loopMIDI</span>
-          <span class="btn-download-meta">Windows only</span>
-        </a>
+        <a href="https://raw.githubusercontent.com/dotwav/clok/main/bridge.js" class="btn-download" download="bridge.js"><span>&#8595;&nbsp; Download bridge.js</span><span class="btn-download-meta">Node.js &middot; ~10KB</span></a>
+        <a href="https://raw.githubusercontent.com/dotwav/clok/main/package.json" class="btn-download" download="package.json"><span>&#8595;&nbsp; Download package.json</span><span class="btn-download-meta">Dependencies manifest</span></a>
+        <a href="https://nodejs.org/en/download" class="btn-download btn-download-secondary" target="_blank" rel="noopener"><span>&#8599;&nbsp; Get Node.js 20 LTS</span><span class="btn-download-meta">nodejs.org/en/download</span></a>
+        <a href="https://www.tobias-erichsen.de/software/loopmidi.html" class="btn-download btn-download-secondary" target="_blank" rel="noopener"><span>&#8599;&nbsp; Get loopMIDI</span><span class="btn-download-meta">Windows only</span></a>
       </div>
     </div>
   </div>
-
   <footer class="land-footer">
     <div>&copy; 2025 Alexander Wilson-Thame &middot; DOTWAV</div>
     <div>CLOK Phase 1 &middot; LTC Engine &middot; Web Audio API &middot; 48kHz</div>
@@ -385,8 +334,6 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 
 <!-- APP -->
 <div id="app-wrapper">
-
-
 <!-- ── TOP BAR ── -->
 <header class="top-bar">
   <div class="topbar-logo">
@@ -533,6 +480,14 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
 
     <div class="s">
       <button class="jam-btn" id="jamBtn">&#9889;&nbsp; Jam sync to decoded input</button>
+      <div style="display:flex;gap:6px;margin-top:8px">
+        <button class="btn btn-secondary btn-sm" id="chaseStartBtn" style="flex:1">&#8635;&nbsp; Enable chase</button>
+        <button class="btn btn-danger btn-sm" id="chaseStopBtn" style="flex:1;display:none">&#9632;&nbsp; Stop chase</button>
+      </div>
+      <div class="signal-row" style="margin-top:8px">
+        <div class="signal-dot" id="chaseSigDot"></div>
+        <span class="signal-label" id="chaseSigLbl">Chase off</span>
+      </div>
     </div>
   </div>
 
@@ -655,845 +610,10 @@ input[type=range]{flex:1;accent-color:var(--amber);cursor:pointer}
   <div>Mode<span id="footMode">Idle</span></div>
   <div>Web Audio API&nbsp;<span>48 kHz · Biphase Mark · MTC</span></div>
 </footer>
-
-<script>
-(function(){
-  const pad=n=>String(n).padStart(2,'0');
-  const $=id=>document.getElementById(id);
-  const SR=48000;
-  let actx=null,devicesUnlocked=false;
-
-  // ── AUDIO WORKLET PROCESSOR SOURCE ────────────────────────────────────────
-  // Inline as a Blob URL — keeps single-file architecture intact.
-  // Responsibilities: detect zero crossings, compute RMS, post back to main thread.
-  // No sample data is transferred — waveform visualisation is replaced by signal dots.
-  const WORKLET_SRC = `
-class LTCDecoderProcessor extends AudioWorkletProcessor {
-  constructor() {
-    super();
-    this._lastSign = 0;
-    this._sampleCount = 0;
-    this._rmsBlock = 0;
-    this._rmsN = 0;
-    this._RMS_INTERVAL = 480; // post RMS every ~10ms at 48kHz
-  }
-
-  process(inputs) {
-    const input = inputs[0];
-    if (!input || !input[0]) return true;
-    const ch = input[0];
-
-    for (let i = 0; i < ch.length; i++) {
-      const s = ch[i];
-
-      // RMS accumulation
-      this._rmsBlock += s * s;
-      this._rmsN++;
-      if (this._rmsN >= this._RMS_INTERVAL) {
-        const rms = Math.sqrt(this._rmsBlock / this._rmsN);
-        this.port.postMessage({ type: 'rms', v: rms });
-        this._rmsBlock = 0;
-        this._rmsN = 0;
-      }
-
-      // Zero crossing detection — only above a small noise floor
-      if (Math.abs(s) > 0.0005) {
-        const sign = s >= 0 ? 1 : -1;
-        if (sign !== this._lastSign && this._lastSign !== 0) {
-          this.port.postMessage({ type: 'zc', t: this._sampleCount });
-        }
-        this._lastSign = sign;
-      }
-
-      this._sampleCount++;
-    }
-    return true;
-  }
-}
-registerProcessor('ltc-decoder', LTCDecoderProcessor);
-`;
-
-  let workletBlobUrl = null;
-
-  async function ensureCtx() {
-    if (actx && actx.state !== 'closed') {
-      if (actx.state === 'suspended') await actx.resume();
-      return;
-    }
-    actx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SR });
-    if (actx.state === 'suspended') await actx.resume();
-
-    // Register worklet module once per context
-    if (!workletBlobUrl) {
-      const blob = new Blob([WORKLET_SRC], { type: 'application/javascript' });
-      workletBlobUrl = URL.createObjectURL(blob);
-    }
-    await actx.audioWorklet.addModule(workletBlobUrl);
-  }
-
-  async function unlockDevs() {
-    if (devicesUnlocked) { await populateDevs(); return; }
-    try {
-      const s = await navigator.mediaDevices.getUserMedia({ audio: true });
-      s.getTracks().forEach(t => t.stop());
-      devicesUnlocked = true;
-    } catch(e) { dlog('Mic permission denied: ' + e.message, 'err'); }
-    await populateDevs();
-  }
-
-  async function populateDevs() {
-    try {
-      const devs = await navigator.mediaDevices.enumerateDevices();
-      const ins = $('decInDev'), outs = $('genOutDev');
-      const pi = ins.value, po = outs.value;
-      ins.innerHTML = '<option value="">Default input</option>';
-      outs.innerHTML = '<option value="">Default output</option>';
-      devs.filter(d => d.kind === 'audioinput').forEach(d => {
-        const o = document.createElement('option');
-        o.value = d.deviceId; o.textContent = d.label || 'Input ' + d.deviceId.slice(0,6);
-        if (d.deviceId === pi) o.selected = true;
-        ins.appendChild(o);
-      });
-      devs.filter(d => d.kind === 'audiooutput').forEach(d => {
-        const o = document.createElement('option');
-        o.value = d.deviceId; o.textContent = d.label || 'Output ' + d.deviceId.slice(0,6);
-        if (d.deviceId === po) o.selected = true;
-        outs.appendChild(o);
-      });
-    } catch(e) {}
-  }
-  populateDevs();
-
-  // ── LTC ENCODER ──────────────────────────────────────────────────────────
-  const SW = 0b0011111111111101;
-  function encBits(h, m, s, f, df) {
-    const b = new Uint8Array(80);
-    const sb = (st, l, v) => { for (let i = 0; i < l; i++) b[st+i] = (v >> i) & 1; };
-    sb(0,4,f%10); sb(8,2,Math.floor(f/10)); if(df) b[10]=1;
-    sb(16,4,s%10); sb(24,3,Math.floor(s/10));
-    sb(32,4,m%10); sb(40,3,Math.floor(m/10));
-    sb(48,4,h%10); sb(56,2,Math.floor(h/10));
-    for (let i = 0; i < 16; i++) b[64+i] = (SW >> i) & 1;
-    let ones = 0; for (let i = 0; i < 27; i++) if(b[i]) ones++;
-    if (ones % 2 !== 0) b[27] = 1;
-    return b;
-  }
-  function bitsToAudio(bits, spb) {
-    const tot = Math.ceil(bits.length * spb), buf = new Float32Array(tot);
-    let lv = 1;
-    for (let i = 0; i < bits.length; i++) {
-      const s0 = Math.round(i*spb), s1 = Math.round((i+1)*spb), sm = Math.round((i+0.5)*spb);
-      lv = -lv;
-      for (let s = s0; s < s1 && s < tot; s++) buf[s] = (bits[i] === 1 && s >= sm) ? -lv : lv;
-      if (bits[i] === 1) lv = -lv;
-    }
-    return buf;
-  }
-
-  // ── GENERATOR STATE ───────────────────────────────────────────────────────
-  let gOn=false, gFR=25, gOff=0, gH=0, gM=0, gS=0, gF=0;
-  let gLT=0, gFA=0, gRaf=null, gUptSec=0, gUptIval=null;
-  let gTF=0, gGain=null, gSched=null, gNS=0, gVolDb=-18;
-  let loopNode=null;
-  const dbl = db => Math.pow(10, db/20);
-
-  function gAdvTC() {
-    gF++;
-    const fps = Math.round(gFR);
-    if (gF >= fps) { gF = 0; gS++; }
-    if (gS >= 60) { gS = 0; gM++; }
-    if (gM >= 60) { gM = 0; gH++; }
-    if (gH >= 24) gH = 0;
-  }
-
-  function gSchedFn() {
-    if (!actx || !gOn) return;
-    const now = actx.currentTime;
-    if (gNS < now) gNS = now + 0.01;
-    while (gNS < now + 0.12) {
-      const spb = SR / gFR / 80;
-      const bits = encBits(gH, gM, gS, gF, gFR === 29.97);
-      const audio = bitsToAudio(bits, spb);
-      const ab = actx.createBuffer(1, audio.length, SR);
-      ab.copyToChannel(audio, 0);
-      const src = actx.createBufferSource();
-      src.buffer = ab;
-      const mode = $('genOutMode').value;
-      if ((mode === 'loopback' || mode === 'both') && loopNode) src.connect(loopNode);
-      if ((mode === 'device' || mode === 'both') && gGain) src.connect(gGain);
-      if (mode === 'loopback' && !loopNode) src.connect(actx.destination);
-      src.start(gNS);
-      gNS += audio.length / SR;
-      gTF++;
-      $('genFout').textContent = gTF;
-      $('genBuf').textContent = Math.max(0, Math.round((gNS - now) * 1000)) + 'ms';
-      gAdvTC();
-    }
-  }
-
-  function gRafLoop(ts) {
-    if (!gOn) return;
-    if (!gLT) gLT = ts;
-    gFA += ts - gLT; gLT = ts;
-    while (gFA >= 1000 / gFR) gFA -= 1000 / gFR;
-    gUpdateDisp();
-    updateGVU();
-    updateGenSigDot();
-    updBits('genBits', encBits(gH, gM, gS, gF, gFR === 29.97), 'gen');
-    gRaf = requestAnimationFrame(gRafLoop);
-  }
-
-  function gUpdateDisp() {
-    let oh=gH, om=gM, os=gS, of_=gF+gOff;
-    const fps = Math.round(gFR);
-    while (of_ >= fps) { of_ -= fps; os++; }
-    while (of_ < 0) { of_ += fps; os--; }
-    while (os >= 60) { os -= 60; om++; }
-    while (os < 0) { os += 60; om--; }
-    while (om >= 60) { om -= 60; oh++; }
-    while (om < 0) { om += 60; oh--; }
-    oh = ((oh % 24) + 24) % 24;
-    $('g-hh').textContent = pad(oh);
-    $('g-mm').textContent = pad(om);
-    $('g-ss').textContent = pad(os);
-    $('g-ff').textContent = pad(Math.max(0, of_));
-    const sign = gOff >= 0 ? '+' : '-', af = Math.abs(gOff), fps2 = Math.round(gFR);
-    const osc = Math.floor(af/fps2), omc = Math.floor(osc/60), ohc = Math.floor(omc/60);
-    $('genOff').textContent = (gOff === 0 ? '±' : sign) + pad(ohc) + ':' + pad(omc%60) + ':' + pad(osc%60) + ':' + pad(af%fps2);
-  }
-
-  // ── GENERATOR SIGNAL DOT ──────────────────────────────────────────────────
-  function updateGenSigDot() {
-    const dot = $('genSigDot'), lbl = $('genSigLbl');
-    if (!gOn) {
-      dot.className = 'signal-dot';
-      lbl.textContent = 'Idle';
-    } else {
-      dot.className = 'signal-dot running';
-      lbl.textContent = 'Generating · ' + Math.round(gFR * 80) + ' bps';
-    }
-  }
-
-  const gVURow = $('genVU');
-  for (let i = 0; i < 20; i++) {
-    const b = document.createElement('div'); b.className = 'vub'; gVURow.appendChild(b);
-  }
-  function updateGVU() {
-    const bars = gVURow.querySelectorAll('.vub');
-    const a = gOn ? Math.round(dbl(gVolDb) * 20) : 0;
-    bars.forEach((b, i) => {
-      b.style.background = i < a
-        ? (i < 14 ? 'rgba(78,201,184,0.5)' : i < 17 ? 'rgba(232,168,48,0.6)' : 'rgba(255,96,96,0.7)')
-        : 'rgba(78,201,184,0.06)';
-    });
-  }
-
-  function updBits(id, bits, mode) {
-    const row = $(id);
-    if (!row.children.length) return;
-    for (let i = 0; i < 80; i++) {
-      const el = row.children[i]; if (!el) continue;
-      el.className = 'bit';
-      if (i >= 64) el.classList.add(mode === 'gen' ? 'sync' : 'dsync');
-      else if (bits[i]) el.classList.add(mode === 'gen' ? 'fresh' : 'dfresh');
-    }
-  }
-
-  async function genStart() {
-    if (gOn) return;
-    await ensureCtx();
-    await unlockDevs();
-    const tc = $('genStartTC').value.trim().split(':').map(Number);
-    if (tc.length === 4 && !tc.some(isNaN)) { gH=tc[0]||0; gM=tc[1]||0; gS=tc[2]||0; gF=tc[3]||0; }
-    gGain = actx.createGain();
-    gGain.gain.value = dbl(gVolDb);
-    gGain.connect(actx.destination);
-    const devId = $('genOutDev').value;
-    if (devId && typeof actx.setSinkId === 'function') {
-      try { await actx.setSinkId(devId); } catch(e) {}
-    }
-    loopNode = actx.createGain();
-    loopNode.gain.value = 1;
-    gOn = true; gLT = 0; gFA = 0; gNS = 0; gTF = 0; gUptSec = 0;
-    gSched = setInterval(gSchedFn, 50);
-    gUptIval = setInterval(() => {
-      gUptSec++;
-      $('genUpt').textContent = pad(Math.floor(gUptSec / 60)) + ':' + pad(gUptSec % 60);
-    }, 1000);
-    gRaf = requestAnimationFrame(gRafLoop);
-    $('genPill').style.borderColor = 'var(--amber-border)';
-    $('genDot').className = 'dot waiting';
-    $('genPillSt').textContent = 'Running';
-    $('genTC').className = 'tc-digits active';
-    $('genStartBtn').disabled = true;
-    $('genStopBtn').disabled = false;
-    $('genFrBdg').textContent = gFR + ' fps';
-    $('genBr').textContent = Math.round(gFR * 80);
-    $('genSrcLbl').textContent = 'Internal gen';
-    updateGenSigDot();
-    updateRouteUI();
-    updateFooter();
-    const mode = $('genOutMode').value;
-    if ((mode === 'loopback' || mode === 'both') && !dOn) setTimeout(decStart, 120);
-  }
-
-  function genStop() {
-    gOn = false;
-    clearInterval(gSched); gSched = null;
-    clearInterval(gUptIval); gUptIval = null;
-    if (gRaf) { cancelAnimationFrame(gRaf); gRaf = null; }
-    if (loopNode) { loopNode.disconnect(); loopNode = null; }
-    $('genPill').style.borderColor = '';
-    $('genDot').className = 'dot';
-    $('genPillSt').textContent = 'Generator idle';
-    $('genTC').className = 'tc-digits idle';
-    $('genStartBtn').disabled = false;
-    $('genStopBtn').disabled = true;
-    updateGenSigDot();
-    updateRouteUI();
-    updateFooter();
-    if (!dOn && actx) { actx.close(); actx = null; workletBlobUrl = null; }
-  }
-
-  function genReset() {
-    genStop();
-    gH=0; gM=0; gS=0; gF=0; gFA=0;
-    $('g-hh').textContent='00'; $('g-mm').textContent='00';
-    $('g-ss').textContent='00'; $('g-ff').textContent='00';
-    $('genFout').textContent='0'; $('genBuf').textContent='0ms';
-    $('genUpt').textContent='00:00';
-    gUpdateDisp();
-  }
-
-  // ── BRIDGE WEBSOCKET ──────────────────────────────────────────────────────
-  let bridgeWS = null, bridgeReconnect = null;
-
-  // ── RECEIVE-MODE BRIDGE — posts LTC frames → bridge → MTC out ────────────
-  let rxBridgeWS = null, rxBridgeReconnect = null, rxBridgeConnected = false;
-
-  function setRxBridgeStatus(state, text) {
-    const dot = $('rxBridgeStatusDot'), txt = $('rxBridgeStatusText'), wrap = $('rxBridgeStatus');
-    if (!dot) return;
-    wrap.className = 'bridge-status' + (state === 'ok' ? ' ok' : state === 'warn' ? ' warn' : '');
-    dot.className  = 'dot' + (state === 'ok' ? ' connected' : state === 'warn' ? ' waiting' : '');
-    txt.textContent = text;
-    rxBridgeConnected = (state === 'ok');
-  }
-
-  function connectRxBridge(url) {
-    if (rxBridgeWS) { try { rxBridgeWS.close(); } catch(e) {} }
-    setRxBridgeStatus('warn', 'Connecting to ' + url + '...');
-    dlog('Connecting to receive-mode bridge @ ' + url, 'warn');
-    const ws = new WebSocket(url); rxBridgeWS = ws;
-    ws.onopen  = () => { dlog('Receive bridge connected', 'ok'); setRxBridgeStatus('ok', 'Connected — ready for LTC'); ws.send(JSON.stringify({type:'ping'})); };
-    ws.onmessage = e => {
-      try {
-        const msg = JSON.parse(e.data);
-        if (msg.type === 'pong') setRxBridgeStatus('ok', 'Bridge in ' + (msg.mode||'?') + ' mode');
-      } catch(e) {}
-    };
-    ws.onerror = () => { setRxBridgeStatus('warn', 'Connection failed — is bridge.js running?'); dlog('Receive bridge error', 'err'); };
-    ws.onclose = () => {
-      rxBridgeConnected = false;
-      if (!rxBridgeActive) return;
-      setRxBridgeStatus('warn', 'Disconnected — retrying…');
-      rxBridgeReconnect = setTimeout(() => connectRxBridge(url), 2000);
-    };
-  }
-
-  function disconnectRxBridge() {
-    clearTimeout(rxBridgeReconnect);
-    if (rxBridgeWS) { try { rxBridgeWS.close(); } catch(e) {} }
-    rxBridgeWS = null; rxBridgeConnected = false;
-    setRxBridgeStatus('none', 'Not connected');
-  }
-
-  let rxBridgeActive = false;
-
-  function postLTCFrame(hh, mm, ss, ff, fps) {
-    if (!rxBridgeActive || !rxBridgeWS || rxBridgeWS.readyState !== WebSocket.OPEN) return;
-    rxBridgeWS.send(JSON.stringify({ type: 'ltc-frame', hh, mm, ss, ff, fps }));
-  }
-
-  function setBridgeStatus(state, text) {
-    const dot = $('bridgeStatusDot'), txt = $('bridgeStatusText'), wrap = $('bridgeStatus');
-    wrap.className = 'bridge-status' + (state === 'ok' ? ' ok' : state === 'warn' ? ' warn' : '');
-    dot.className = 'dot' + (state === 'ok' ? ' connected' : state === 'warn' ? ' waiting' : '');
-    txt.textContent = text;
-  }
-
-  function onBridgeMsg(raw) {
-    try {
-      const msg = JSON.parse(raw);
-      if (msg.type === 'tc' || msg.type === 'hello') {
-        const { hh, mm, ss, ff, fps, playing: pl } = msg;
-        if (hh === undefined) return;
-        $('d-hh').textContent = pad(hh);
-        $('d-mm').textContent = pad(mm);
-        $('d-ss').textContent = pad(ss);
-        $('d-ff').textContent = pad(ff);
-        $('decTC').className = 'tc-digits locked';
-        $('decFrBdg').textContent = (fps || 25) + ' fps';
-        $('decSrcLbl').textContent = pl ? 'Pro Tools ▶' : 'Pro Tools ■';
-        if (!dLocked) {
-          dLocked = true; dLockStart = Date.now(); dFC = 0;
-          $('decDot').className = 'dot connected';
-          $('decPillSt').textContent = 'Locked';
-          $('decPill').style.borderColor = 'var(--teal-border)';
-          $('lockInd').className = 'lock-ind locked';
-          $('lockInd').innerHTML = '<div class="ldot"></div>Locked';
-          updateDecSigDot();
-          dlog('Pro Tools lock @ ' + pad(hh) + ':' + pad(mm) + ':' + pad(ss) + ':' + pad(ff), 'ok');
-          updateFooter();
-        }
-        setBridgeStatus('ok', pad(hh)+':'+pad(mm)+':'+pad(ss)+':'+pad(ff)+(pl?' ▶':' ■'));
-        if (dLocked) $('decLkTime').textContent = ((Date.now() - dLockStart) / 1000).toFixed(1) + 's';
-        dFC++;
-        $('decFdec').textContent = dFC;
-        $('decDbStat').textContent = (fps || '--') + ' fps';
-        if (dFC % 5 === 0) {
-          const hist = $('decHist');
-          const row = document.createElement('div'); row.className = 'hi';
-          row.innerHTML = '<span class="hitc">'+pad(hh)+':'+pad(mm)+':'+pad(ss)+':'+pad(ff)+'</span><span class="himeta">'+(fps||'?')+'fps'+(pl?' ▶':' ■')+'</span>';
-          hist.insertBefore(row, hist.firstChild);
-          while (hist.children.length > 5) hist.removeChild(hist.lastChild);
-        }
-      }
-      if (msg.type === 'transport' && msg.playing === false) {
-        $('decSrcLbl').textContent = 'Pro Tools ■';
-        if (dLocked) setBridgeStatus('ok', 'Connected · transport stopped');
-      }
-    } catch(e) {}
-  }
-
-  function connectBridge(url) {
-    if (bridgeWS) { try { bridgeWS.close(); } catch(e) {} }
-    setBridgeStatus('warn', 'Connecting to ' + url + '...');
-    dlog('Connecting to CLOK Bridge @ ' + url, 'warn');
-    const ws = new WebSocket(url); bridgeWS = ws;
-    ws.onopen = () => {
-      dlog('Bridge connected', 'ok');
-      setBridgeStatus('ok', 'Connected — waiting for Pro Tools…');
-      ws.send(JSON.stringify({ type: 'ping' }));
-      updateDecSigDot();
-    };
-    ws.onmessage = e => onBridgeMsg(e.data);
-    ws.onerror = () => { setBridgeStatus('warn', 'Connection failed — is bridge.js running?'); dlog('Bridge error', 'err'); };
-    ws.onclose = () => {
-      if (!dOn) return;
-      setBridgeStatus('warn', 'Disconnected — retrying…');
-      dLocked = false;
-      $('lockInd').className = 'lock-ind searching';
-      $('lockInd').innerHTML = '<div class="ldot"></div>Searching';
-      updateDecSigDot();
-      bridgeReconnect = setTimeout(() => connectBridge(url), 2000);
-    };
-  }
-
-  function disconnectBridge() {
-    clearTimeout(bridgeReconnect);
-    if (bridgeWS) { try { bridgeWS.close(); } catch(e) {} }
-    bridgeWS = null;
-    setBridgeStatus('none', 'Not connected');
-  }
-
-  // ── DECODER STATE ─────────────────────────────────────────────────────────
-  let dOn=false, dStream=null, dWorkletNode=null, dIG=null;
-  let dThr=0.015, dPreamp=6;
-  let lastZC=0, nomHalf=0, halfDurs=[], pendHalf=false;
-  let dBB=[], dBC=0, dFC=0, dDetFps=null;
-  let dLocked=false, dLockStart=null, dCG=0;
-  let dSigLv=0, dTS=0;
-  let dHC=0;
-  const SBITS = [0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1];
-
-  function decodeBits(bits) {
-    for (let i = 0; i < 16; i++) if (bits[64+i] !== SBITS[i]) return null;
-    const gb = (s, l) => { let v = 0; for (let i = 0; i < l; i++) v |= (bits[s+i] << i); return v; };
-    const frames = gb(8,2)*10+gb(0,4), secs = gb(24,3)*10+gb(16,4);
-    const mins = gb(40,3)*10+gb(32,4), hours = gb(56,2)*10+gb(48,4);
-    if (frames > 29 || secs > 59 || mins > 59 || hours > 23) return null;
-    return { hours, mins, secs, frames, df: bits[10] };
-  }
-
-  function detFPS(br) {
-    for (const f of [25, 24, 30, 29.97, 23.976]) if (Math.abs(br - f*80) < f*80*.03) return f;
-    return null;
-  }
-
-  function dlog(msg, cls='') {
-    const box = $('decLog');
-    const e = document.createElement('div'); e.className = 'le ' + cls;
-    e.textContent = new Date().toTimeString().slice(0,8) + ' ' + msg;
-    box.insertBefore(e, box.firstChild);
-    while (box.children.length > 25) box.removeChild(box.lastChild);
-  }
-
-  // ── DECODER SIGNAL DOT ────────────────────────────────────────────────────
-  function updateDecSigDot() {
-    const dot = $('decSigDot'), lbl = $('decSigLbl');
-    if (!dOn) {
-      dot.className = 'signal-dot';
-      lbl.textContent = 'Idle';
-    } else if (dLocked) {
-      dot.className = 'signal-dot locked';
-      lbl.textContent = 'Locked';
-    } else if (dSigLv > dThr * 0.3 || $('decInMode').value === 'bridge') {
-      dot.className = 'signal-dot active';
-      lbl.textContent = 'Searching…';
-    } else {
-      dot.className = 'signal-dot';
-      lbl.textContent = 'Listening';
-    }
-  }
-
-  // Called by worklet message handler with zero-crossing sample offset
-  function onZC(st) {
-    if (lastZC === 0) { lastZC = st; return; }
-    const iv = st - lastZC; lastZC = st;
-    if (iv < 2 || iv > SR) return;
-    halfDurs.push(iv);
-    if (halfDurs.length > 32) halfDurs.shift();
-    if (halfDurs.length >= 4) {
-      const s = [...halfDurs].sort((a, b) => a - b);
-      nomHalf = s[Math.floor(s.length / 2)];
-    }
-    if (nomHalf === 0) return;
-    const r = iv / nomHalf;
-    if (r < 0.55 || r > 2.3) return;
-    if (r <= 1.5) {
-      if (pendHalf) { emitBit(1); pendHalf = false; }
-      else pendHalf = true;
-    } else {
-      if (pendHalf) pendHalf = false;
-      emitBit(0);
-    }
-  }
-
-  function emitBit(bit) {
-    dBB.push(bit);
-    if (dBB.length > 80) dBB.shift();
-    if (dBB.length === 80) tryDec([...dBB]);
-    dBC++;
-    if (dBB.length >= 80 && dBC % 8 === 0) updBits('decBits', [...dBB].slice(-80), 'dec');
-  }
-
-  function tryDec(bits) {
-    const res = decodeBits(bits); if (!res) { dCG = 0; return; }
-    dCG++; dFC++;
-    $('decFdec').textContent = dFC;
-    const br = nomHalf > 0 ? (SR / nomHalf) * 2 : 0;
-    const fps = detFPS(br); if (fps) dDetFps = fps;
-    $('decDfps').textContent = fps ? fps.toFixed(fps % 1 === 0 ? 0 : 3) : '--';
-    $('decFrBdg').textContent = (fps ? fps.toFixed(fps % 1 === 0 ? 0 : 3) : '--') + ' fps';
-    $('d-hh').textContent = pad(res.hours);
-    $('d-mm').textContent = pad(res.mins);
-    $('d-ss').textContent = pad(res.secs);
-    $('d-ff').textContent = pad(res.frames);
-    $('decTC').className = 'tc-digits locked';
-    $('decSrcLbl').textContent = res.df ? 'DF' : 'NDF';
-    if (dCG === 3 && !dLocked) {
-      dLocked = true; dLockStart = Date.now();
-      $('decDot').className = 'dot connected';
-      $('decPillSt').textContent = 'Locked';
-      $('decPill').style.borderColor = 'var(--teal-border)';
-      $('lockInd').className = 'lock-ind locked';
-      $('lockInd').innerHTML = '<div class="ldot"></div>Locked';
-      updateDecSigDot();
-      dlog('Lock @ ' + pad(res.hours)+':'+pad(res.mins)+':'+pad(res.secs)+':'+pad(res.frames), 'ok');
-      updateFooter();
-    }
-    if (dLocked) {
-      $('decLkTime').textContent = ((Date.now() - dLockStart) / 1000).toFixed(1) + 's';
-      if (dHC++ % 5 === 0) {
-        const hist = $('decHist');
-        const row = document.createElement('div'); row.className = 'hi';
-        row.innerHTML = '<span class="hitc">'+pad(res.hours)+':'+pad(res.mins)+':'+pad(res.secs)+':'+pad(res.frames)+'</span><span class="himeta">'+(fps?fps.toFixed(2):'?')+'fps</span>';
-        hist.insertBefore(row, hist.firstChild);
-        while (hist.children.length > 5) hist.removeChild(hist.lastChild);
-      }
-      // Post frame to receive-mode bridge if connected
-      postLTCFrame(res.hours, res.mins, res.secs, res.frames, fps || dDetFps || 25);
-    }
-  }
-
-  // ── WORKLET MESSAGE HANDLER ───────────────────────────────────────────────
-  function onWorkletMessage(ev) {
-    const msg = ev.data;
-    if (msg.type === 'zc') {
-      onZC(msg.t);
-    } else if (msg.type === 'rms') {
-      dSigLv = msg.v;
-      const db = msg.v > 0 ? (20 * Math.log10(msg.v)).toFixed(1) + ' dB' : '--';
-      $('decDb').textContent = db;
-      $('decDbStat').textContent = db;
-      // Update signal dot state on RMS ticks (cheap, no RAF needed)
-      if (!dLocked) updateDecSigDot();
-    }
-  }
-
-  async function decStart() {
-    if (dOn) return;
-    const mode = $('decInMode').value;
-
-    if (mode === 'bridge') {
-      const url = ($('bridgeUrl').value || 'ws://localhost:9999').trim();
-      dOn = true; dLocked = false; dCG = 0; dLockStart = null; dFC = 0;
-      $('decDot').className = 'dot searching';
-      $('decPillSt').textContent = 'Searching';
-      ['d-hh','d-mm','d-ss','d-ff'].forEach(id => $(id).textContent = '--');
-      $('decTC').className = 'tc-digits idle';
-      $('decStartBtn').disabled = true;
-      $('decStopBtn').disabled = false;
-      $('lockInd').className = 'lock-ind searching';
-      $('lockInd').innerHTML = '<div class="ldot"></div>Searching';
-      $('decSrcLbl').textContent = 'Bridge';
-      updateDecSigDot();
-      connectBridge(url);
-      updateRouteUI();
-      updateFooter();
-      dlog('Bridge mode — waiting for CLOK Bridge…', 'ok');
-      return;
-    }
-
-    await ensureCtx();
-
-    // Create AudioWorkletNode
-    dWorkletNode = new AudioWorkletNode(actx, 'ltc-decoder', { numberOfInputs: 1, numberOfOutputs: 0 });
-    dWorkletNode.port.onmessage = onWorkletMessage;
-
-    if (mode === 'loopback') {
-      if (!loopNode) { dlog('Generator not running — start generator first', 'warn'); return; }
-      loopNode.connect(dWorkletNode);
-      dlog('Internal loopback connected', 'ok');
-      $('decSrcLbl').textContent = 'Internal';
-    } else {
-      await unlockDevs();
-      try {
-        const con = { audio: {
-          deviceId: $('decInDev').value || undefined,
-          sampleRate: SR, channelCount: 1,
-          echoCancellation: false, noiseSuppression: false, autoGainControl: false
-        }};
-        dStream = await navigator.mediaDevices.getUserMedia(con);
-        const src = actx.createMediaStreamSource(dStream);
-        dIG = actx.createGain(); dIG.gain.value = dPreamp;
-        src.connect(dIG);
-        dIG.connect(dWorkletNode);
-        dlog('Device input active', 'ok');
-        $('decSrcLbl').textContent = 'Audio in';
-      } catch(e) { dlog('Input error: ' + e.message, 'err'); return; }
-    }
-
-    dOn = true; dLocked = false; dCG = 0; dLockStart = null; dTS = 0; dFC = 0; dDetFps = null;
-    lastZC = 0; nomHalf = 0; halfDurs = []; pendHalf = false; dBB = [];
-    $('decDot').className = 'dot searching';
-    $('decPillSt').textContent = 'Searching';
-    ['d-hh','d-mm','d-ss','d-ff'].forEach(id => $(id).textContent = '--');
-    $('decTC').className = 'tc-digits idle';
-    $('decStartBtn').disabled = true;
-    $('decStopBtn').disabled = false;
-    $('lockInd').className = 'lock-ind searching';
-    $('lockInd').innerHTML = '<div class="ldot"></div>Searching';
-    updateDecSigDot();
-    updateRouteUI();
-    updateFooter();
-    dlog('Decoder active — listening for LTC…', 'ok');
-  }
-
-  function decStop() {
-    dOn = false; dLocked = false;
-    disconnectBridge();
-    if (dWorkletNode) { dWorkletNode.disconnect(); dWorkletNode.port.onmessage = null; dWorkletNode = null; }
-    if (dIG) { dIG.disconnect(); dIG = null; }
-    if (dStream) { dStream.getTracks().forEach(t => t.stop()); dStream = null; }
-    dSigLv = 0;
-    $('decDot').className = 'dot';
-    $('decPillSt').textContent = 'Decoder idle';
-    $('decPill').style.borderColor = '';
-    $('lockInd').className = 'lock-ind';
-    $('lockInd').innerHTML = '<div class="ldot"></div>No lock';
-    ['d-hh','d-mm','d-ss','d-ff'].forEach(id => $(id).textContent = '--');
-    $('decTC').className = 'tc-digits idle';
-    $('decFrBdg').textContent = '-- fps';
-    $('decSrcLbl').textContent = 'Waiting';
-    $('decDb').textContent = '--';
-    $('decDbStat').textContent = '--';
-    $('decStartBtn').disabled = false;
-    $('decStopBtn').disabled = true;
-    updateDecSigDot();
-    updateRouteUI();
-    updateFooter();
-    if (!gOn && actx) { actx.close(); actx = null; workletBlobUrl = null; }
-  }
-
-  // ── UI STATE HELPERS ──────────────────────────────────────────────────────
-  function updateRouteUI() {
-    const rp = $('routeTag'), mode = $('genOutMode').value;
-    const lb = $('loopBanner'), lp = $('loopPill');
-    if (gOn && dOn && (mode === 'loopback' || mode === 'both')) {
-      rp.className = 'route-tag live'; rp.textContent = 'Loop';
-      lp.style.display = 'flex'; lb.style.display = 'flex';
-    } else if (gOn && dOn) {
-      rp.className = 'route-tag live'; rp.textContent = 'Device';
-      lp.style.display = 'none'; lb.style.display = 'none';
-    } else {
-      rp.className = 'route-tag'; rp.textContent = 'Route';
-      lp.style.display = 'none';
-    }
-  }
-
-  function updateFooter() {
-    let m = 'Idle';
-    if (gOn && dOn) m = dLocked ? 'Running + locked' : 'Running + searching';
-    else if (gOn) m = 'Generating';
-    else if (dOn) m = dLocked ? 'Locked' : 'Searching';
-    $('footMode').textContent = m;
-  }
-
-  function handleOutMode() {
-    const m = $('genOutMode').value;
-    $('genDeviceRow').style.display = (m === 'device' || m === 'both') ? 'block' : 'none';
-    $('loopBanner').style.display = (m === 'loopback' || m === 'both') ? 'flex' : 'none';
-  }
-
-  function handleInMode() {
-    const m = $('decInMode').value;
-    $('decBridgeRow').style.display = m === 'bridge' ? 'block' : 'none';
-    $('decDeviceRow').style.display = m === 'device' ? 'block' : 'none';
-  }
-
-  // ── BUILD BIT ROWS ────────────────────────────────────────────────────────
-  ['genBits','decBits'].forEach(id => {
-    const r = $(id);
-    for (let i = 0; i < 80; i++) {
-      const b = document.createElement('div'); b.className = 'bit'; r.appendChild(b);
-    }
-  });
-
-  // ── EVENT LISTENERS ───────────────────────────────────────────────────────
-  $('genStartBtn').addEventListener('click', genStart);
-  $('genStopBtn').addEventListener('click', genStop);
-  $('genResetBtn').addEventListener('click', genReset);
-  $('decStartBtn').addEventListener('click', decStart);
-  $('decStopBtn').addEventListener('click', decStop);
-  $('genFrSel').addEventListener('change', function() {
-    gFR = parseFloat(this.value);
-    $('genFrBdg').textContent = this.options[this.selectedIndex].text + ' fps';
-    $('genBr').textContent = Math.round(gFR * 80);
-  });
-  $('genOutMode').addEventListener('change', handleOutMode);
-  $('decInMode').addEventListener('change', handleInMode);
-  $('genOffMinus').addEventListener('click', () => {
-    const i = $('genOffVal'); i.value = parseInt(i.value) - 1; gOff = parseInt(i.value); gUpdateDisp();
-  });
-  $('genOffPlus').addEventListener('click', () => {
-    const i = $('genOffVal'); i.value = parseInt(i.value) + 1; gOff = parseInt(i.value); gUpdateDisp();
-  });
-  $('genOffVal').addEventListener('input', function() { gOff = parseInt(this.value) || 0; gUpdateDisp(); });
-  $('genVolR').addEventListener('input', function() {
-    gVolDb = parseInt(this.value); $('genVolV').textContent = gVolDb + ' dB';
-    if (gGain) gGain.gain.value = dbl(gVolDb);
-  });
-  $('thrR').addEventListener('input', function() { dThr = parseFloat(this.value); $('thrV').textContent = dThr.toFixed(3); });
-  $('gainR').addEventListener('input', function() {
-    dPreamp = parseInt(this.value); $('gainV').textContent = dPreamp + 'x';
-    if (dIG) dIG.gain.value = dPreamp;
-  });
-  $('genOutDev').addEventListener('change', async function() {
-    if (actx && typeof actx.setSinkId === 'function') {
-      try { await actx.setSinkId(this.value || ''); } catch(e) {}
-    }
-  });
-
-  $('rxBridgeTestBtn').addEventListener('click', () => {
-    const url = ($('rxBridgeUrl').value || 'ws://localhost:9999').trim();
-    setRxBridgeStatus('warn', 'Testing…');
-    const ws = new WebSocket(url);
-    const t = setTimeout(() => { ws.close(); setRxBridgeStatus('warn', 'No response — start bridge.js --mode receive'); }, 2500);
-    ws.onopen = () => ws.send(JSON.stringify({ type: 'ping' }));
-    ws.onmessage = e => {
-      clearTimeout(t); ws.close();
-      try {
-        const msg = JSON.parse(e.data);
-        if (msg.mode === 'receive') { setRxBridgeStatus('ok', 'Reachable — receive mode ✓'); dlog('Receive bridge test OK', 'ok'); }
-        else { setRxBridgeStatus('warn', 'Bridge is in ' + (msg.mode||'?') + ' mode — restart with --mode receive'); dlog('Bridge mode mismatch', 'warn'); }
-      } catch(e) { setRxBridgeStatus('ok', 'Reachable'); }
-    };
-    ws.onerror = () => { clearTimeout(t); setRxBridgeStatus('warn', 'Cannot connect'); dlog('Receive bridge test failed', 'err'); };
-  });
-
-  $('rxBridgeStartBtn').addEventListener('click', () => {
-    const url = ($('rxBridgeUrl').value || 'ws://localhost:9999').trim();
-    rxBridgeActive = true;
-    connectRxBridge(url);
-    $('rxBridgeStartBtn').disabled = true;
-    $('rxBridgeStopBtn').disabled  = false;
-    updateRxSigDot();
-  });
-
-  $('rxBridgeStopBtn').addEventListener('click', () => {
-    rxBridgeActive = false;
-    disconnectRxBridge();
-    $('rxBridgeStartBtn').disabled = false;
-    $('rxBridgeStopBtn').disabled  = true;
-    updateRxSigDot();
-  });
-
-  function updateRxSigDot() {
-    const dot = $('rxSigDot'), lbl = $('rxSigLbl');
-    if (!rxBridgeActive) { dot.className = 'signal-dot'; lbl.textContent = 'Idle'; }
-    else if (rxBridgeConnected && dLocked) { dot.className = 'signal-dot locked'; lbl.textContent = 'Forwarding MTC'; }
-    else if (rxBridgeConnected) { dot.className = 'signal-dot active'; lbl.textContent = 'Connected — waiting for lock'; }
-    else { dot.className = 'signal-dot active'; lbl.textContent = 'Connecting…'; }
-  }
-
-  // Keep rx dot in sync with decoder lock state
-  const _origUpdateDecSigDot = updateDecSigDot;
-  updateDecSigDot = function() { _origUpdateDecSigDot(); updateRxSigDot(); };
-    const url = ($('bridgeUrl').value || 'ws://localhost:9999').trim();
-    setBridgeStatus('warn', 'Testing…');
-    const ws = new WebSocket(url);
-    const t = setTimeout(() => { ws.close(); setBridgeStatus('warn', 'No response — start bridge.js first'); }, 2500);
-    ws.onopen = () => ws.send(JSON.stringify({ type: 'ping' }));
-    ws.onmessage = () => { clearTimeout(t); ws.close(); setBridgeStatus('ok', 'Reachable'); dlog('Bridge test OK', 'ok'); };
-    ws.onerror = () => { clearTimeout(t); setBridgeStatus('warn', 'Cannot connect'); dlog('Bridge test failed', 'err'); };
-  });
-
-  $('jamBtn').addEventListener('click', function() {
-    if (!dLocked || !gOn) return;
-    const hh = $('d-hh').textContent; if (hh === '--') return;
-    gH = parseInt(hh); gM = parseInt($('d-mm').textContent);
-    gS = parseInt($('d-ss').textContent); gF = parseInt($('d-ff').textContent);
-    this.textContent = 'Jammed';
-    this.style.color = 'var(--teal)';
-    this.style.borderColor = 'var(--teal-border)';
-    this.style.background = 'var(--teal-dim)';
-    setTimeout(() => {
-      this.textContent = '⚡\u00a0 Jam sync to decoded input';
-      this.style.color = ''; this.style.borderColor = ''; this.style.background = '';
-    }, 1800);
-  });
-
-  // ── COLLAPSIBLE SECTIONS ──────────────────────────────────────────────────
-  window.toggleSection = function(id) {
-    const el = $(id);
-    if (el) el.classList.toggle('open');
-  };
-
-  // ── INIT ──────────────────────────────────────────────────────────────────
-  handleOutMode();
-  handleInMode();
-  updateGenSigDot();
-  updateDecSigDot();
-  updateRxSigDot();
-  dlog('DOTWAV CLOK — LTC engine ready');
-})();
-</script>
-
 </div>
 
 <script>
+// ── LANDING ───────────────────────────────────────────────────────────────────
 function launchApp(){
   document.getElementById('landing').style.display='none';
   var app=document.getElementById('app-wrapper');
@@ -1513,9 +633,8 @@ function backToLanding(){
   document.getElementById('app-wrapper').classList.remove('visible');
 }
 if(window.location.search.includes('app')||window.location.hash==='#app'){launchApp();}
-</script>
 
-<script>
+// ── APP ───────────────────────────────────────────────────────────────────────
 
 (function(){
   const pad=n=>String(n).padStart(2,'0');
@@ -1911,6 +1030,7 @@ registerProcessor('ltc-decoder', LTCDecoderProcessor);
         dFC++;
         $('decFdec').textContent = dFC;
         $('decDbStat').textContent = (fps || '--') + ' fps';
+        chaseUpdate(hh, mm, ss, ff, fps || 25);
         if (dFC % 5 === 0) {
           const hist = $('decHist');
           const row = document.createElement('div'); row.className = 'hi';
@@ -2074,6 +1194,7 @@ registerProcessor('ltc-decoder', LTCDecoderProcessor);
       }
       // Post frame to receive-mode bridge if connected
       postLTCFrame(res.hours, res.mins, res.secs, res.frames, fps || dDetFps || 25);
+      chaseUpdate(res.hours, res.mins, res.secs, res.frames, fps || dDetFps || 25);
     }
   }
 
@@ -2341,12 +1462,74 @@ registerProcessor('ltc-decoder', LTCDecoderProcessor);
     if (el) el.classList.toggle('open');
   };
 
+  // ── CHASE MODE ────────────────────────────────────────────────────────────
+  // Generator continuously follows decoded TC frame-for-frame.
+  // Used for MTC→LTC conversion: Pro Tools drives the decoder via bridge,
+  // generator outputs LTC, chase keeps them locked together.
+  let chaseActive = false;
+
+  function chaseUpdate(hh, mm, ss, ff, fps) {
+    if (!chaseActive) return;
+    // Snap generator TC to decoded TC
+    gH = hh; gM = mm; gS = ss; gF = ff;
+    // Sync frame rate too if it differs
+    if (Math.abs(gFR - fps) > 0.01) {
+      gFR = fps;
+      $('genFrSel').value = String(fps);
+      $('genFrBdg').textContent = fps + ' fps';
+      $('genBr').textContent = Math.round(fps * 80);
+    }
+    updateChaseSigDot();
+  }
+
+  function updateChaseSigDot() {
+    const dot = $('chaseSigDot'), lbl = $('chaseSigLbl');
+    if (!chaseActive) {
+      dot.className = 'signal-dot';
+      lbl.textContent = 'Chase off';
+    } else if (dLocked && gOn) {
+      dot.className = 'signal-dot locked';
+      lbl.textContent = 'Chasing — locked';
+    } else if (chaseActive && !gOn) {
+      dot.className = 'signal-dot active';
+      lbl.textContent = 'Chase on — start generator';
+    } else {
+      dot.className = 'signal-dot active';
+      lbl.textContent = 'Waiting for lock…';
+    }
+  }
+
+  $('chaseStartBtn').addEventListener('click', async function() {
+    chaseActive = true;
+    $('chaseStartBtn').style.display = 'none';
+    $('chaseStopBtn').style.display = 'flex';
+    $('jamBtn').disabled = true;
+    // Auto-start generator in loopback mode if not already running
+    if (!gOn) {
+      const prev = $('genOutMode').value;
+      if (prev === 'bridge') $('genOutMode').value = 'loopback';
+      await genStart();
+    }
+    updateChaseSigDot();
+    dlog('Chase mode enabled — generator will follow decoded TC', 'ok');
+  });
+
+  $('chaseStopBtn').addEventListener('click', function() {
+    chaseActive = false;
+    $('chaseStartBtn').style.display = '';
+    $('chaseStopBtn').style.display = 'none';
+    $('jamBtn').disabled = false;
+    updateChaseSigDot();
+    dlog('Chase mode disabled', 'warn');
+  });
+
   // ── INIT ──────────────────────────────────────────────────────────────────
   handleOutMode();
   handleInMode();
   updateGenSigDot();
   updateDecSigDot();
   updateRxSigDot();
+  updateChaseSigDot();
   dlog('DOTWAV CLOK — LTC engine ready');
 })();
 
