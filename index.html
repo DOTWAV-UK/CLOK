@@ -1184,7 +1184,7 @@ registerProcessor('ltc-decoder', LTCDecoderProcessor);
   function onBridgeMsg(raw) {
     try {
       const msg = JSON.parse(raw);
-      if (msg.type === 'tc' || msg.type === 'hello') {
+      if (msg.type === 'tc_frame' || msg.type === 'tc' || msg.type === 'hello') {
         const { hh, mm, ss, ff, fps, playing: pl } = msg;
         if (hh === undefined) return;
         $('d-hh').textContent = pad(hh);
